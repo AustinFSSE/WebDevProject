@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Pacific Trails Resort</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="pacific.css">
+    <script src="myFunctions.js"></script>
+
+</head>
+    <body>
+        <header>
+            <h1>
+                <a href="index.html">Pacific Trails Resort</a>
+            </h1>
+        </header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="yurts.html">Yurts</a></li>
+                <li><a href="activities.html">Activities</a></li>
+                <li><a href="reservations.html">Reservations</a></li>
+            </ul>
+        </nav>
+        <div id="wrapper">
+            <div id="reshero"></div>
+            <main>
+                <h2>
+                    Reservations at Pacific Trails
+                </h2>
+                <h3>
+                    Contact Us
+                </h3>
+                <p> Required fields are marked with an asterisk*.
+                    <form method="post" action="https://webdevbasics.net/scripts/pacific.php" onsubmit="return checkPhone('phone', 'message');">
+                        <label for="fname">*First Name:</label> <input type="text" id="fname" name="fname" placeholder="first name" required>
+                        <label for="lname">*Last Name:</label> <input type="text" id="lname" name="lname" placeholder="last name" required="required">
+                        <label for="email">*E-mail:</label> <input type="text" id="email" name="email" placeholder="123main@email.org" required="required">
+                        <label for="phone" >Phone Number:</label> <input type="text" id="phone" name="phone" placeholder="123-456-7890" onblur="checkPhone('phone','message')">
+                        <label for="date">*Arrival Date:</label> <input type="date" id="date" name="date" placeholder="mm/dd/yyyy" required="required">
+                        <label for="nights">*Nights:</label> <input type="number" id="nights" min="1" max="14" name="nights" required="required" placeholder="How many nights?">
+                        <label for="comments">Comments:</label> <textarea id="comments" rows="2" cols="20" name="comments" placeholder="Write your comments here!"></textarea>
+                        <input type="submit" id="submit" value="submit">
+                    </form>
+                <div><span id="message"></span></div>
+            </main>
+            <footer>
+                Copyright © 2020 Pacific Trails Resort<br/>
+                <a href="mailto:amartin405@ivytech.edu">amartin405@ivytech.edu</a>
+            </footer>
+        </div>
+    </body>
+</html>

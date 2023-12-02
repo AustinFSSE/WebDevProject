@@ -1,0 +1,244 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    background-color: #90C7E3;
+    color: #666666;
+    font-family: Verdana, Arial, sans-serif;
+}
+
+main{
+    display: block;
+    padding: 0 1em;
+}
+
+#mobile {
+    display: inline;
+}
+
+#desktop {
+    display: none;
+}
+
+header {
+    padding: 1em;
+}
+
+header a {
+    text-decoration: none;
+}
+
+header a:link, header a:visited {
+    color: white;
+}
+
+header a:hover {
+    color: lightblue;
+}
+
+h1 {
+    margin-top: 5%;
+    background-color: #002171;
+    color: #fff;
+    font-family: Georgia, serif;
+    font-size: 1.5em;
+    text-align: center;
+    height: auto;
+}
+
+nav {
+    font-size: 1.2em;
+    background-color: white;
+    text-align: center;
+}
+
+nav a {
+    text-decoration: none;
+}
+
+nav a:link{
+    color: #5c7FA3;
+}
+
+nav a:visited {
+    color: #344873;
+}
+
+nav a:hover {
+    color: #A52A2A;
+}
+
+nav ul {
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+    padding-left: 0;
+    margin: 0;
+}
+nav li{
+    padding: 0.5em 1em;
+    width: 100%;
+    border-bottom: 1px solid;
+}
+section{
+    padding-left: 0.5em;
+    padding-right: 0.5em;
+}
+input {
+    margin-bottom: 0.5em;
+}
+#reshero{
+    height: 300px;
+    background-image: url("/images/ocean.jpg");
+    background-size: 200% 100%;
+    background-repeat: no-repeat;
+}
+#trailhero{
+    background-image: url("./images/trail.jpg");
+    height: 300px;
+    background-size: 200% 100%;
+    background-repeat: no-repeat;
+
+}
+#yurtshero{
+    background-image: url("./images/yurt.jpg");
+    height: 300px;
+    background-size: 200% 100%;
+    background-repeat: no-repeat;
+
+}
+#homehero{
+    background-image: url("./images/coast.jpg");
+    height: 300px;
+    background-size: 200% 100%;
+    background-repeat: no-repeat;
+
+}
+h2 {
+    color: mediumblue;
+    font-family: Georgia, sans-serif;
+}
+dt {
+    margin-left: 20px;
+    color: darkblue;
+    font-weight: 700;
+}
+.resort {
+    color: mediumblue;
+    font-size: 1.2em;
+}
+footer {
+    font-size: .70em;
+    font-style: italic;
+    text-align: center;
+    padding: 1em;
+    background-color: white;
+}
+#wrapper {
+    background-color: white;
+    text-indent: .1em;
+    min-width: 960px;
+    max-width: 2048px;
+
+}
+form {
+    display: flex;
+    flex-direction: column;
+    padding-left: 1em;
+    width: 80%;
+}
+table {
+    border: 1px blue solid;
+    border-collapse: collapse;
+    width: 90%;
+    margin-left: 5%;
+}
+th {
+    background-color: lightblue;
+    border: 1px blue solid;
+}
+th tr {
+    border: 1px blue solid;
+}
+td {
+    text-align: center;
+    padding: 5px;
+    border: 1px blue solid;
+}
+td.text {
+    text-align: left;
+}
+td, th{
+    padding: 5px;
+    border: 1px blue solid;
+}
+tr:nth-child(even){
+    background-color: lightblue;
+}
+textarea{
+    margin-bottom: 0.5em;
+}
+@media only screen and (min-width: 600px) {
+
+    body {
+        background-color: lightblue;
+    }
+    h1{
+        font-size: 2em;
+        letter-spacing: .25em;
+    }
+    nav ul {
+        display: flex;
+        justify-content: space-around;
+        padding-right: 2em;
+        flex-direction: row;
+        flex-wrap: nowrap;
+    }
+    nav li {
+        width: 12em;
+        border-bottom: none;
+    }
+    section {
+        padding-right: 2em;
+        padding-left: 2em;
+    }
+    form {
+        width: 60%;
+        display: grid;
+        grid-gap: 1em;
+        grid-template-columns: 10em 1fr;
+    }
+    #flow {
+        display: flex;
+        flex-direction: row;
+    }
+    #mobile {
+        display: none;
+    }
+    #desktop {
+        display: inline;
+    }
+    #homehero, #yurtshero, #trailhero {
+        background-size: 100%, 100%;
+    }
+    #submit {
+        grid-column: 2;
+        width: 9em;
+    }
+    
+}
+@media only screen and (min-width: 1024px) {
+    body {
+        background-image: linear-gradient(to bottom, white 20%, #90C7E3 60%, white 100%);
+    }
+    nav ul {
+        padding-right: 10%;
+        padding-left: 10%;
+    }
+    #wrapper {
+        margin: auto;
+        width: 80%;
+    }
+}
